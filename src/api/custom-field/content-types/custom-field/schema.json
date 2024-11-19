@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "custom_fields",
+  "info": {
+    "singularName": "custom-field",
+    "pluralName": "custom-fields",
+    "displayName": "CustomFields",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "values": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "is_filterable": {
+      "type": "string"
+    },
+    "is_sortable": {
+      "type": "string"
+    },
+    "is_search": {
+      "type": "string"
+    },
+    "is_visible": {
+      "type": "string"
+    },
+    "customFieldObj": {
+      "type": "json"
+    },
+    "collection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collection.collection",
+      "inversedBy": "custom_fields"
+    }
+  }
+}

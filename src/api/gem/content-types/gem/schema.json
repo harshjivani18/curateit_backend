@@ -1,0 +1,402 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gems",
+  "info": {
+    "singularName": "gem",
+    "pluralName": "gems",
+    "displayName": "Gems",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "metaData": {
+      "type": "json"
+    },
+    "upvotes": {
+      "type": "integer",
+      "default": 0
+    },
+    "downvotes": {
+      "type": "integer"
+    },
+    "is_favourite": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "gem_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::gem-categorie.gem-categorie",
+      "inversedBy": "Gems"
+    },
+    "collection_gems": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collection.collection",
+      "inversedBy": "gems"
+    },
+    "media": {
+      "type": "json"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "gems"
+    },
+    "gem_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gem-tag.gem-tag",
+      "mappedBy": "gems"
+    },
+    "media_type": {
+      "type": "enumeration",
+      "enum": [
+        "Ai Prompt",
+        "App",
+        "Article",
+        "Audio",
+        "Blog",
+        "Book",
+        "Code",
+        "Email Newsletter",
+        "Epub",
+        "Feedback",
+        "Highlight",
+        "Image",
+        "Link",
+        "LinkedIn",
+        "Movie",
+        "Note",
+        "PDF",
+        "Citation",
+        "Podcast",
+        "Product",
+        "Profile",
+        "Quote",
+        "RSS",
+        "Screenshot",
+        "SocialFeed",
+        "Testimonial",
+        "Text Expander",
+        "Video"
+      ]
+    },
+    "url": {
+      "type": "text"
+    },
+    "text": {
+      "type": "text"
+    },
+    "domain_manager": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::domain-manager.domain-manager",
+      "inversedBy": "gems"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "gems"
+    },
+    "remarks": {
+      "type": "text"
+    },
+    "Comments": {
+      "type": "integer"
+    },
+    "Shares": {
+      "type": "integer"
+    },
+    "Views": {
+      "type": "integer"
+    },
+    "AverageRating": {
+      "type": "float"
+    },
+    "S3_link": {
+      "type": "json"
+    },
+    "FileName": {
+      "type": "string"
+    },
+    "imageColor": {
+      "type": "json"
+    },
+    "prompt_response": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::prompt-response.prompt-response",
+      "mappedBy": "gem"
+    },
+    "entityObj": {
+      "type": "json"
+    },
+    "ratings": {
+      "type": "decimal"
+    },
+    "custom_fields_obj": {
+      "type": "json"
+    },
+    "isTabCollection": {
+      "type": "boolean",
+      "default": false
+    },
+    "service_type": {
+      "type": "enumeration",
+      "enum": [
+        "pocket",
+        "instapaper"
+      ]
+    },
+    "image_url": {
+      "type": "text"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "item_id": {
+      "type": "string"
+    },
+    "post_type": {
+      "type": "enumeration",
+      "enum": [
+        "SavedToCurateit",
+        "Bookmark",
+        "Like",
+        "Pin",
+        "Post",
+        "ImagePost",
+        "VideoPost",
+        "Collection",
+        "Highlight",
+        "Article",
+        "Star",
+        "Upvoted",
+        "SavedPost"
+      ],
+      "default": "SavedToCurateit"
+    },
+    "broken_link": {
+      "type": "boolean"
+    },
+    "status_code": {
+      "type": "biginteger"
+    },
+    "highlightId": {
+      "type": "string"
+    },
+    "socialfeed_obj": {
+      "type": "json"
+    },
+    "child_gem_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gem.gem",
+      "mappedBy": "parent_gem_id"
+    },
+    "parent_gem_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::gem.gem",
+      "inversedBy": "child_gem_id"
+    },
+    "socialfeedAt": {
+      "type": "datetime"
+    },
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "Twitter",
+        "LinkedIn",
+        "Reddit",
+        "Producthunt",
+        "Medium",
+        "HackerNews",
+        "Github",
+        "Imdb",
+        "Instagram",
+        "Tiktok",
+        "YouTube",
+        "AppStore",
+        "G2",
+        "PlayStore",
+        "Trustpilot",
+        "Capterra",
+        "AppSumo",
+        "Goodreads",
+        "TripAdvisor",
+        "Amazon",
+        "Quora",
+        "Google",
+        "Yelp",
+        "Shopify",
+        "Pinterest"
+      ]
+    },
+    "expander": {
+      "type": "json"
+    },
+    "creatorName": {
+      "type": "string"
+    },
+    "releaseDate": {
+      "type": "string"
+    },
+    "entityId": {
+      "type": "string"
+    },
+    "isRead": {
+      "type": "boolean"
+    },
+    "activity_logs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::activity-log.activity-log",
+      "inversedBy": "gems"
+    },
+    "comments_count": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "shares_count": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "likes_count": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "save_count": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "showThumbnail": {
+      "type": "boolean",
+      "default": true
+    },
+    "fileType": {
+      "type": "string"
+    },
+    "html_file_link": {
+      "type": "string"
+    },
+    "isPublic": {
+      "type": "boolean",
+      "default": false
+    },
+    "share_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "share_gems"
+    },
+    "like_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "like_gems"
+    },
+    "save_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "save_gems"
+    },
+    "isLike": {
+      "type": "boolean",
+      "default": false
+    },
+    "prompt_count": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "prompt": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::prompt-builder.prompt-builder",
+      "inversedBy": "gem"
+    },
+    "seo": {
+      "type": "json"
+    },
+    "altInfo": {
+      "type": "text"
+    },
+    "usageCount": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "isApproved": {
+      "type": "boolean",
+      "default": false
+    },
+    "isPending": {
+      "type": "boolean",
+      "default": true
+    },
+    "processAt": {
+      "type": "date"
+    },
+    "isThumbnailBroken": {
+      "type": "boolean",
+      "default": false
+    },
+    "slug": {
+      "type": "text"
+    },
+    "isPublicPrompt": {
+      "type": "boolean",
+      "default": false
+    },
+    "redirect_url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "default": "Open"
+    },
+    "priority": {
+      "type": "string",
+      "default": "Low"
+    },
+    "type": {
+      "type": "string",
+      "default": "Idea"
+    },
+    "other_feedback": {
+      "type": "json"
+    },
+    "is_enable_for_all_sites": {
+      "type": "boolean",
+      "default": true
+    },
+    "prompt_priority_sites": {
+      "type": "json"
+    },
+    "prompt_category": {
+      "type": "enumeration",
+      "enum": [
+        "Search",
+        "Chat",
+        "Write",
+        "Rewrite",
+        "Reply",
+        "Reading"
+      ],
+      "default": "Search"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_extras_digital_ranks",
+  "info": {
+    "displayName": "DigitalRank",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "digitalrank_bool": {
+      "type": "boolean",
+      "default": false
+    },
+    "digitalrank": {
+      "type": "integer"
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    },
+    "queryStr": {
+      "type": "string"
+    }
+  }
+}

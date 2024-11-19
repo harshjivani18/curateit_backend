@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "text_to_speeches",
+  "info": {
+    "singularName": "text-to-speech",
+    "pluralName": "text-to-speeches",
+    "displayName": "text-to-speech",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "audio_url": {
+      "type": "text"
+    },
+    "url": {
+      "type": "text"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "text_to_speeches"
+    }
+  }
+}

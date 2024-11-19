@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "config_limits",
+  "info": {
+    "singularName": "config-limit",
+    "pluralName": "config-limits",
+    "displayName": "ConfigLimit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gem_limit": {
+      "type": "biginteger"
+    },
+    "coll_limit": {
+      "type": "biginteger"
+    },
+    "tag_limit": {
+      "type": "biginteger"
+    },
+    "speech_limit": {
+      "type": "biginteger"
+    },
+    "ocr_image_limit": {
+      "type": "biginteger"
+    },
+    "gems_point": {
+      "type": "biginteger"
+    },
+    "colls_point": {
+      "type": "biginteger"
+    },
+    "comments_point": {
+      "type": "biginteger"
+    },
+    "reactions_point": {
+      "type": "biginteger"
+    },
+    "allowsDownload": {
+      "type": "integer"
+    },
+    "allowViews": {
+      "type": "integer"
+    },
+    "expiryDate": {
+      "type": "string"
+    },
+    "aiPromptLibraryId": {
+      "type": "biginteger"
+    },
+    "textExpanderId": {
+      "type": "biginteger"
+    },
+    "curateitDefaultId": {
+      "type": "biginteger"
+    },
+    "username": {
+      "type": "string"
+    },
+    "is_advanced_search": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "included_members": {
+      "type": "biginteger"
+    },
+    "guest_users": {
+      "type": "biginteger"
+    },
+    "workspaces": {
+      "type": "biginteger"
+    },
+    "bio_links": {
+      "type": "biginteger"
+    },
+    "public_collection_and_tags": {
+      "type": "biginteger"
+    },
+    "audio_recording": {
+      "type": "biginteger"
+    },
+    "file_upload": {
+      "type": "float"
+    },
+    "storage": {
+      "type": "float"
+    },
+    "file_upload_size_limit": {
+      "type": "biginteger"
+    },
+    "related_plans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::plan.plan",
+      "mappedBy": "config_limit"
+    },
+    "is_free": {
+      "type": "boolean"
+    }
+  }
+}

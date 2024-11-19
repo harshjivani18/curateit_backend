@@ -1,0 +1,66 @@
+module.exports = ({ env }) => {
+    return ({
+  
+      "request-id": {
+        enabled: true,
+        'google-auth': {
+          enabled: true,
+        },
+        'facebook-auth': {
+          enabled: true,
+        },
+        'twitter-auth': {
+          enabled: true,
+        },
+        'linkedin-auth': {
+          enabled: true,
+        },
+        config: {
+          correlationIdHeader: "X-Amzn-Trace-Id",
+        },
+      },
+  
+      email: {
+        config: {
+          provider: 'amazon-ses',
+          providerOptions: {
+            key: env('AWS_SES_KEY'),
+            secret: env('AWS_SES_SECRET'),
+            amazon: env('AWS_EMAIL_URL'),
+          },
+          settings: {
+            defaultFrom: env('AWS_EMAIL_FROM'),
+            defaultReplyTo: env('AWS_EMAIL_REPLY_TO'),
+          },
+        },
+      },
+      
+      upload: {
+        config: {
+          provider: 'aws-s3',
+          providerOptions: {
+            accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+            secretAccessKey: process.env.AWS_ACCESS_SECRET,
+            region: process.env.AWS_REGION,
+            params: {
+              Bucket: process.env.AWS_BUCKET,
+            },
+          },
+          actionOptions: {
+            upload: {},
+            uploadStream: {},
+            delete: {},
+          },
+        },
+      },
+      meilisearch: {
+        config: {
+          // Your meili host
+          host: process.env.MEILISEARCH_HOST,
+          // Your master key or private key
+          apiKey: process.env.MEILISEARCH_API_KEY,
+        },
+      },
+    });
+  };
+  

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_extras_links",
+  "info": {
+    "displayName": "Links",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link_bool": {
+      "type": "boolean",
+      "default": false
+    },
+    "links": {
+      "type": "json"
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    },
+    "queryStr": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "point_logs",
+  "info": {
+    "singularName": "point-log",
+    "pluralName": "point-logs",
+    "displayName": "PointLogs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reason": {
+      "type": "string"
+    },
+    "points": {
+      "type": "string"
+    },
+    "account": {
+      "type": "string"
+    },
+    "user_account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-account.user-account",
+      "inversedBy": "point_logs"
+    }
+  }
+}

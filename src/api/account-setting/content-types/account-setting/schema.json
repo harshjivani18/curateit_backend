@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "account_settings",
+  "info": {
+    "singularName": "account-setting",
+    "pluralName": "account-settings",
+    "displayName": "AccountSetting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "profile_url": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "json"
+    },
+    "about_us": {
+      "type": "text"
+    },
+    "name_pronouns": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female",
+        "non-binary"
+      ],
+      "default": "non-binary"
+    },
+    "country": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "social_links": {
+      "type": "json"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "is_test_account": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_reminder_sent": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

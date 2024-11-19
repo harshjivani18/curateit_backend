@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_extras_htmls",
+  "info": {
+    "displayName": "HTML",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "html_bool": {
+      "type": "boolean",
+      "default": false
+    },
+    "html": {
+      "type": "richtext"
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    },
+    "queryStr": {
+      "type": "string"
+    }
+  }
+}

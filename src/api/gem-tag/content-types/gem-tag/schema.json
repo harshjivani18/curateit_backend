@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gem_tags",
+  "info": {
+    "singularName": "gem-tag",
+    "pluralName": "gem-tags",
+    "displayName": "Gem Tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gem": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tag.tag",
+      "inversedBy": "gem_tags"
+    },
+    "gems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gem.gem",
+      "inversedBy": "gem_tags"
+    }
+  }
+}

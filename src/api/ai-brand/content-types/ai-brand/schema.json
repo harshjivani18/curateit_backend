@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_brands",
+  "info": {
+    "singularName": "ai-brand",
+    "pluralName": "ai-brands",
+    "displayName": "AI Brands",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "brand_type": {
+      "type": "enumeration",
+      "enum": [
+        "Persona",
+        "Voice",
+        "Prompt"
+      ],
+      "default": "Voice"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "icon": {
+      "type": "text"
+    }
+  }
+}

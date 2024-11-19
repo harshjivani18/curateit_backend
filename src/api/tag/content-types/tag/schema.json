@@ -1,0 +1,165 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Tags",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gem_tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gem-tag.gem-tag",
+      "mappedBy": "tag"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::collection.collection",
+      "mappedBy": "tags"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "tags"
+    },
+    "feedback": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::feedback.feedback",
+      "inversedBy": "tags"
+    },
+    "gems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gem.gem",
+      "inversedBy": "tags"
+    },
+    "child_tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "parent_tag"
+    },
+    "parent_tag": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tag.tag",
+      "inversedBy": "child_tags"
+    },
+    "tagColor": {
+      "type": "string"
+    },
+    "is_sub_tag": {
+      "type": "boolean",
+      "default": false
+    },
+    "wallpaper": {
+      "type": "json"
+    },
+    "avatar": {
+      "type": "json"
+    },
+    "background": {
+      "type": "json"
+    },
+    "description": {
+      "type": "text"
+    },
+    "invitedUsersViaMail": {
+      "type": "json"
+    },
+    "invitedUsersViaLink": {
+      "type": "json"
+    },
+    "sharable_links": {
+      "type": "string"
+    },
+    "tagPassword": {
+      "type": "string"
+    },
+    "originalPassword": {
+      "type": "string",
+      "private": true
+    },
+    "isPublicLink": {
+      "type": "boolean",
+      "default": false
+    },
+    "viewSettingObj": {
+      "type": "json"
+    },
+    "media_type": {
+      "type": "string"
+    },
+    "seo": {
+      "type": "json"
+    },
+    "slug": {
+      "type": "text"
+    },
+    "order_of_gems": {
+      "type": "json"
+    },
+    "showSeo": {
+      "type": "boolean",
+      "default": false
+    },
+    "showSubTag": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSocialIcon": {
+      "type": "boolean",
+      "default": true
+    },
+    "viewSubTag": {
+      "type": "boolean",
+      "default": true
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "allowUserSubmission": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSidebar": {
+      "type": "boolean",
+      "default": true
+    },
+    "allowCopy": {
+      "type": "boolean",
+      "default": true
+    },
+    "currentPublicLayout": {
+      "type": "string",
+      "default": "moodboard"
+    },
+    "showGem": {
+      "type": "boolean",
+      "default": true
+    },
+    "order_of_sub_tags": {
+      "type": "json"
+    },
+    "gemOnClickEvent": {
+      "type": "enumeration",
+      "enum": [
+        "gem view",
+        "new tab"
+      ],
+      "default": "gem view"
+    }
+  }
+}

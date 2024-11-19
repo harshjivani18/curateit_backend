@@ -1,0 +1,131 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plan_services",
+  "info": {
+    "singularName": "plan-service",
+    "pluralName": "plan-services",
+    "displayName": "PlanService",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gem_limit": {
+      "type": "biginteger",
+      "default": "25000"
+    },
+    "gem_used": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "coll_limit": {
+      "type": "biginteger",
+      "default": "25000"
+    },
+    "coll_used": {
+      "type": "biginteger",
+      "default": "1"
+    },
+    "tag_limit": {
+      "type": "biginteger",
+      "default": "50000"
+    },
+    "tag_used": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "plan": {
+      "type": "enumeration",
+      "enum": [
+        "free",
+        "paid"
+      ],
+      "default": "free"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "plan_service"
+    },
+    "speech_limit": {
+      "type": "biginteger",
+      "default": "15600"
+    },
+    "speech_used": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "speech_remain": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "ocr_image_limit": {
+      "type": "biginteger",
+      "default": "50"
+    },
+    "ocr_image_used": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "is_advanced_search": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "included_members": {
+      "type": "biginteger"
+    },
+    "guest_users": {
+      "type": "biginteger"
+    },
+    "workspaces": {
+      "type": "biginteger"
+    },
+    "bio_links": {
+      "type": "biginteger"
+    },
+    "public_collection_and_tags": {
+      "type": "biginteger"
+    },
+    "audio_recording": {
+      "type": "biginteger"
+    },
+    "file_upload": {
+      "type": "float"
+    },
+    "storage": {
+      "type": "float"
+    },
+    "file_upload_size_limit": {
+      "type": "biginteger"
+    },
+    "audio_recording_used": {
+      "type": "biginteger"
+    },
+    "public_collection_and_tags_used": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "included_members_used": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "guest_users_used": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "related_plan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::plan.plan"
+    },
+    "subscription": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subscription.subscription"
+    }
+  }
+}

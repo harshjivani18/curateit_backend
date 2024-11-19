@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "openais",
+  "info": {
+    "singularName": "openai",
+    "pluralName": "openais",
+    "displayName": "openai"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "result": {
+      "type": "text"
+    }
+  }
+}

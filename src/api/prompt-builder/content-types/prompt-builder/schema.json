@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prompt_builders",
+  "info": {
+    "singularName": "prompt-builder",
+    "pluralName": "prompt-builders",
+    "displayName": "PromptBuilder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "prompt": {
+      "type": "text"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "prompts"
+    },
+    "gem": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::gem.gem",
+      "mappedBy": "prompt"
+    },
+    "share_type": {
+      "type": "enumeration",
+      "enum": [
+        "Public",
+        "Private"
+      ],
+      "default": "Private"
+    },
+    "isApproved": {
+      "type": "boolean",
+      "default": false
+    },
+    "total_count": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "prompt_type": {
+      "type": "enumeration",
+      "enum": [
+        "Admin",
+        "User"
+      ],
+      "default": "User"
+    },
+    "icon": {
+      "type": "string",
+      "default": "https://d3jrelxj5ogq5g.cloudfront.net/webapp/logo192.png"
+    }
+  }
+}

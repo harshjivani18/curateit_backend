@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_extras_traffic",
+  "info": {
+    "displayName": "Traffic",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "traffic_bool": {
+      "type": "boolean",
+      "default": false
+    },
+    "traffic": {
+      "type": "json"
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

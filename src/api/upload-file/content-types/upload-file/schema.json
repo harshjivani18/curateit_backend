@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "upload_files",
+  "info": {
+    "singularName": "upload-file",
+    "pluralName": "upload-files",
+    "displayName": "Upload File"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "S3_links": {
+      "type": "json"
+    }
+  }
+}

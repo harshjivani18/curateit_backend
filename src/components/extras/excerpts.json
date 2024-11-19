@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_extras_excerpts",
+  "info": {
+    "displayName": "Excerpts",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "excerpts_bool": {
+      "type": "boolean",
+      "default": false
+    },
+    "excerpts": {
+      "type": "text"
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    },
+    "queryStr": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accounts",
+  "info": {
+    "singularName": "account",
+    "pluralName": "accounts",
+    "displayName": "Accounts",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "roles": {
+      "type": "string"
+    },
+    "users": {
+      "type": "string"
+    },
+    "user_accounts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-account.user-account",
+      "mappedBy": "account_1"
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::collection.collection",
+      "mappedBy": "account_2"
+    }
+  }
+}

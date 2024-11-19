@@ -1,0 +1,284 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collections",
+  "info": {
+    "singularName": "collection",
+    "pluralName": "collections",
+    "displayName": "Collections",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "color": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sharable_links": {
+      "type": "string"
+    },
+    "invited_users": {
+      "type": "string"
+    },
+    "public_url_detail": {
+      "type": "string"
+    },
+    "total_downvotes": {
+      "type": "integer"
+    },
+    "total_upvotes": {
+      "type": "integer"
+    },
+    "comments": {
+      "type": "string"
+    },
+    "public_link": {
+      "type": "string"
+    },
+    "account": {
+      "type": "string"
+    },
+    "custom_fields": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::custom-field.custom-field",
+      "mappedBy": "collection"
+    },
+    "gems": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gem.gem",
+      "mappedBy": "collection_gems"
+    },
+    "account_2": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "collections"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "collections"
+    },
+    "is_sub_collection": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "collection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collection.collection",
+      "inversedBy": "parent_collection"
+    },
+    "parent_collection": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::collection.collection",
+      "mappedBy": "collection"
+    },
+    "rating": {
+      "type": "integer",
+      "default": 5,
+      "max": 5,
+      "min": 1
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "collections"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categorie.categorie",
+      "inversedBy": "collections"
+    },
+    "invitedUsersViaMail": {
+      "type": "json"
+    },
+    "invitedUsersViaLinks": {
+      "type": "json"
+    },
+    "custom_fields_obj": {
+      "type": "json"
+    },
+    "iconLink": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "json"
+    },
+    "media_type": {
+      "type": "string"
+    },
+    "background": {
+      "type": "json"
+    },
+    "coverImage": {
+      "type": "string"
+    },
+    "follower_users": {
+      "type": "json"
+    },
+    "viewSettingObj": {
+      "type": "json"
+    },
+    "isPublicLink": {
+      "type": "boolean",
+      "default": false
+    },
+    "collectionPassword": {
+      "type": "string"
+    },
+    "activity_logs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activity-log.activity-log",
+      "mappedBy": "collection"
+    },
+    "comments_count": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "shares_count": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "likes_count": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "save_count": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "wallpaper": {
+      "type": "json"
+    },
+    "isShareCollection": {
+      "type": "boolean",
+      "default": false
+    },
+    "share_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "share_collections"
+    },
+    "like_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "like_collections"
+    },
+    "save_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "save_collections"
+    },
+    "originalPassword": {
+      "type": "string",
+      "private": true
+    },
+    "seo": {
+      "type": "json"
+    },
+    "isBioContactCollection": {
+      "type": "boolean",
+      "default": false,
+      "private": true
+    },
+    "showSidebar": {
+      "type": "boolean",
+      "default": true
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "viewSubCollection": {
+      "type": "boolean",
+      "default": true
+    },
+    "publicSubCollection": {
+      "type": "boolean",
+      "default": true
+    },
+    "allowCopy": {
+      "type": "boolean",
+      "default": true
+    },
+    "slug": {
+      "type": "text"
+    },
+    "allowUserSubmission": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSocialIcons": {
+      "type": "boolean",
+      "default": true
+    },
+    "order_of_gems": {
+      "type": "json"
+    },
+    "showSeo": {
+      "type": "boolean",
+      "default": false
+    },
+    "currentPublicLayout": {
+      "type": "string",
+      "default": "moodboard"
+    },
+    "showGem": {
+      "type": "boolean",
+      "default": true
+    },
+    "order_of_sub_collections": {
+      "type": "json"
+    },
+    "gemOnClickEvent": {
+      "type": "enumeration",
+      "enum": [
+        "gem view",
+        "new tab"
+      ],
+      "default": "gem view"
+    },
+    "otherSupportedMediaTypes": {
+      "type": "json"
+    },
+    "is_embed_topbar_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "siteConfig": {
+      "type": "json"
+    }
+  }
+}

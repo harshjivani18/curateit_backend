@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedbacks",
+  "info": {
+    "singularName": "feedback",
+    "pluralName": "feedbacks",
+    "displayName": "Feedback",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "imageLinks": {
+      "type": "json"
+    },
+    "isExtension": {
+      "type": "boolean",
+      "default": false
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "feedbacks"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Report Bug",
+        "Feature Request",
+        "Question",
+        "Appreciate"
+      ],
+      "default": "Report Bug",
+      "required": true
+    },
+    "bugPriority": {
+      "type": "enumeration",
+      "enum": [
+        "Critical",
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "filesLinks": {
+      "type": "json"
+    },
+    "meta": {
+      "type": "json"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "ToDo",
+        "Running",
+        "Done",
+        "OnHold",
+        "WontDo"
+      ],
+      "default": "ToDo"
+    },
+    "feedbackTags": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "feedback"
+    }
+  }
+}

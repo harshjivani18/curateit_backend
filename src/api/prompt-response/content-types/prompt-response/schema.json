@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prompt_responses",
+  "info": {
+    "singularName": "prompt-response",
+    "pluralName": "prompt-responses",
+    "displayName": "promptResponse",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "prompt": {
+      "type": "text"
+    },
+    "selectedText": {
+      "type": "text"
+    },
+    "response": {
+      "type": "text"
+    },
+    "domain_manager": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::domain-manager.domain-manager",
+      "mappedBy": "prompt_response"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "prompt_response"
+    },
+    "gem": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::gem.gem",
+      "inversedBy": "prompt_response"
+    }
+  }
+}

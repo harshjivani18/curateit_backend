@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscriptions",
+  "info": {
+    "singularName": "subscription",
+    "pluralName": "subscriptions",
+    "displayName": "Subscriptions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "plan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::plan.plan"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "tenure": {
+      "type": "enumeration",
+      "enum": [
+        "Monthly",
+        "Yearly"
+      ]
+    },
+    "subscription_id": {
+      "type": "string",
+      "required": true
+    },
+    "start_at": {
+      "type": "string"
+    },
+    "end_at": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "subscriber_email": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string"
+    },
+    "canceled_at": {
+      "type": "string"
+    },
+    "transaction_id": {
+      "type": "string"
+    },
+    "scheduled_change": {
+      "type": "json"
+    }
+  }
+}

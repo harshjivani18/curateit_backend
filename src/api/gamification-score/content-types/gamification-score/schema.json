@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gamification_scores",
+  "info": {
+    "singularName": "gamification-score",
+    "pluralName": "gamification-scores",
+    "displayName": "GamificationScore",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gems": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "colls": {
+      "type": "biginteger",
+      "default": "1"
+    },
+    "comments": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "reactions": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "N/A",
+        "Rookie",
+        "Aspiring Influencer",
+        "Expert",
+        "Legend"
+      ],
+      "default": "Rookie"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "gamification_score"
+    },
+    "gems_point": {
+      "type": "biginteger",
+      "default": "1"
+    },
+    "colls_point": {
+      "type": "biginteger",
+      "default": "1"
+    },
+    "comments_point": {
+      "type": "biginteger",
+      "default": "1"
+    },
+    "reactions_point": {
+      "type": "biginteger",
+      "default": "1"
+    },
+    "totalScore": {
+      "type": "biginteger",
+      "default": "1"
+    }
+  }
+}

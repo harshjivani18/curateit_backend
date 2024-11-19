@@ -1,0 +1,197 @@
+{
+  "kind": "collectionType",
+  "collectionName": "domain_managers",
+  "info": {
+    "singularName": "domain-manager",
+    "pluralName": "domain-managers",
+    "displayName": "DomainManager",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    },
+    "DomainType": {
+      "type": "enumeration",
+      "enum": [
+        "Domain",
+        "Subdomain",
+        "URL",
+        "Profile"
+      ]
+    },
+    "DomainStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Processing",
+        "Done "
+      ]
+    },
+    "domainName": {
+      "type": "string"
+    },
+    "Extras": {
+      "type": "dynamiczone",
+      "components": [
+        "extras.brand-colors",
+        "extras.iframe",
+        "extras.email",
+        "extras.category",
+        "extras.digital-rank",
+        "extras.excerpts",
+        "extras.health-check",
+        "extras.html",
+        "extras.links",
+        "extras.phone-numbers",
+        "extras.screenshots",
+        "extras.social-links",
+        "extras.technology-stack",
+        "extras.text",
+        "extras.traffic",
+        "extras.additional-fields"
+      ]
+    },
+    "medium": {
+      "type": "string"
+    },
+    "canonical": {
+      "type": "string"
+    },
+    "gems": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gem.gem",
+      "mappedBy": "domain_manager"
+    },
+    "thumbnail": {
+      "type": "json"
+    },
+    "logo": {
+      "type": "json"
+    },
+    "icon": {
+      "type": "json"
+    },
+    "SocialWebsites": {
+      "type": "boolean",
+      "default": false
+    },
+    "renderOnlyObj": {
+      "type": "json"
+    },
+    "Comments": {
+      "type": "integer"
+    },
+    "Shares": {
+      "type": "integer"
+    },
+    "Views": {
+      "type": "integer"
+    },
+    "AverageRating": {
+      "type": "float"
+    },
+    "Upvotes": {
+      "type": "integer"
+    },
+    "Downvotes": {
+      "type": "integer"
+    },
+    "MainDomain": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::domain-manager.domain-manager",
+      "inversedBy": "URLs"
+    },
+    "URLs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::domain-manager.domain-manager",
+      "mappedBy": "MainDomain"
+    },
+    "TagsData": {
+      "type": "json"
+    },
+    "prompt_response": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::prompt-response.prompt-response",
+      "inversedBy": "domain_manager"
+    },
+    "siteSummary": {
+      "type": "text"
+    },
+    "media_type": {
+      "type": "enumeration",
+      "enum": [
+        "Ai Prompt",
+        "App",
+        "Article",
+        "Audio",
+        "Book",
+        "Code",
+        "Email Newsletter",
+        "Epub",
+        "Highlight",
+        "Image",
+        "Link",
+        "Movie",
+        "Note",
+        "PDF",
+        "Podcast",
+        "Product",
+        "Profile",
+        "Quote",
+        "RSS",
+        "Screenshot",
+        "Social Feed",
+        "Text",
+        "Twitter",
+        "Video"
+      ]
+    },
+    "logoUrl": {
+      "type": "string"
+    },
+    "thumbnailUrl": {
+      "type": "string"
+    },
+    "iconUrl": {
+      "type": "string"
+    },
+    "websiteInfo": {
+      "type": "json"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "domain_managers"
+    },
+    "microlink": {
+      "type": "json"
+    },
+    "iframely": {
+      "type": "json"
+    },
+    "apify": {
+      "type": "json"
+    },
+    "articleDetails": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_extras_emails",
+  "info": {
+    "displayName": "Email",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "email_bool": {
+      "type": "boolean",
+      "default": false
+    },
+    "email": {
+      "type": "json"
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    },
+    "queryStr": {
+      "type": "string"
+    }
+  }
+}

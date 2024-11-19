@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_extras_phone_numbers",
+  "info": {
+    "displayName": "PhoneNumbers",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "phonenumber_bool": {
+      "type": "boolean",
+      "default": false
+    },
+    "phonenumber": {
+      "type": "json"
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    },
+    "queryStr": {
+      "type": "string"
+    }
+  }
+}

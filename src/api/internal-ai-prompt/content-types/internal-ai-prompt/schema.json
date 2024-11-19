@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "internal_ai_prompts",
+  "info": {
+    "singularName": "internal-ai-prompt",
+    "pluralName": "internal-ai-prompts",
+    "displayName": "InternalAIPrompt",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "prompt": {
+      "type": "text"
+    },
+    "promptType": {
+      "type": "enumeration",
+      "enum": [
+        "Explain Site & Get Keywords",
+        "Text or Code OCR",
+        "Get Keywords",
+        "Youtube Summary",
+        "SEO Prompts",
+        "Audio Text",
+        "Citation",
+        "Import with .csv or .txt file",
+        "Import with text",
+        "Group links prompt",
+        "Brand Voice Prompt",
+        "Brand Persona Prompt",
+        "Main Chat Prompt",
+        "Rephrase Prompt"
+      ]
+    },
+    "inputWords": {
+      "type": "integer"
+    },
+    "seo_prompt_type": {
+      "type": "string"
+    }
+  }
+}

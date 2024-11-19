@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_extras_additional_fields",
+  "info": {
+    "displayName": "AdditionalFields",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "additionalFields": {
+      "type": "json"
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

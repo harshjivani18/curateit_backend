@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_extras_social_links",
+  "info": {
+    "displayName": "SocialLinks",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sociallink_bool": {
+      "type": "boolean",
+      "default": false
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    },
+    "socialLinks": {
+      "type": "json"
+    },
+    "queryStr": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "screenshots",
+  "info": {
+    "singularName": "screenshot",
+    "pluralName": "screenshots",
+    "displayName": "Screenshot"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "screenshotURL": {
+      "type": "string"
+    }
+  }
+}

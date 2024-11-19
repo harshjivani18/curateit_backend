@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "site_managers",
+  "info": {
+    "singularName": "site-manager",
+    "pluralName": "site-managers",
+    "displayName": "siteManager",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "siteInfoObj": {
+      "type": "json"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "iframelyObj": {
+      "type": "json"
+    }
+  }
+}

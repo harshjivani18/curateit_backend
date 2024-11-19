@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_query_params_brand_colors",
+  "info": {
+    "displayName": "BrandColors",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "brand_colors": {
+      "type": "boolean",
+      "default": false
+    },
+    "logoColor": {
+      "type": "json"
+    },
+    "landingPageColor": {
+      "type": "json"
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    },
+    "queryStr": {
+      "type": "string"
+    }
+  }
+}

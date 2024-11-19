@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_extras_screenshots",
+  "info": {
+    "displayName": "Screenshots",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "screenshot": {
+      "type": "json"
+    },
+    "fullscreenshot": {
+      "type": "json"
+    },
+    "screenshot_bool": {
+      "type": "boolean",
+      "default": false
+    },
+    "fullscreenshot_bool": {
+      "type": "boolean",
+      "default": false
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    },
+    "queryStr": {
+      "type": "string"
+    }
+  }
+}

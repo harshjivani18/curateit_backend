@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ocrs",
+  "info": {
+    "singularName": "ocr",
+    "pluralName": "ocrs",
+    "displayName": "ocr",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ImageText": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

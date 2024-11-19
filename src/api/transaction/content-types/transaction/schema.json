@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "singularName": "transaction",
+    "pluralName": "transactions",
+    "displayName": "Transactions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "plan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::plan.plan"
+    },
+    "transaction_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "subscription_id": {
+      "type": "string"
+    },
+    "subscription": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subscription.subscription"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "email": {
+      "type": "string"
+    },
+    "invoice_number": {
+      "type": "string"
+    },
+    "payment_method_id": {
+      "type": "string"
+    },
+    "currency_code": {
+      "type": "string"
+    },
+    "payment_details": {
+      "type": "json"
+    },
+    "transaction_amount": {
+      "type": "string"
+    },
+    "invoice_id": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "billed_at": {
+      "type": "string"
+    },
+    "price_id": {
+      "type": "string"
+    },
+    "credit_to_balance": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sidebar_managements",
+  "info": {
+    "singularName": "sidebar-management",
+    "pluralName": "sidebar-managements",
+    "displayName": "SidebarApp",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "openAs": {
+      "type": "enumeration",
+      "enum": [
+        "Main Window",
+        "Sidebar"
+      ],
+      "default": "Main Window"
+    },
+    "viewType": {
+      "type": "enumeration",
+      "enum": [
+        "Private",
+        "Public"
+      ],
+      "default": "Private"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "sidebar_app"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "General",
+        "Productivity",
+        "AI",
+        "Chat"
+      ],
+      "default": "General"
+    },
+    "categoryType": {
+      "type": "enumeration",
+      "enum": [
+        "General",
+        "AI",
+        "Google Apps",
+        "iCloud",
+        "Streaming",
+        "Social Networks",
+        "News",
+        "Music",
+        "Messengers"
+      ],
+      "default": "General"
+    }
+  }
+}

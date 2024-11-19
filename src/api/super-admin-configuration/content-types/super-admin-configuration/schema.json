@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "super_admin_configurations",
+  "info": {
+    "singularName": "super-admin-configuration",
+    "pluralName": "super-admin-configurations",
+    "displayName": "Super Admin Configuration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tutorial_video_url": {
+      "type": "text"
+    },
+    "extension_url": {
+      "type": "text"
+    },
+    "tutorial_video_thumbnail": {
+      "type": "text"
+    },
+    "tutorial_video_embed_code": {
+      "type": "text"
+    },
+    "extension_onboarding_video_url": {
+      "type": "text"
+    },
+    "extension_onboarding_embed_video": {
+      "type": "text"
+    }
+  }
+}

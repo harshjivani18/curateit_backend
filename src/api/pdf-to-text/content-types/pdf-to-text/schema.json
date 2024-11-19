@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pdf_to_texts",
+  "info": {
+    "singularName": "pdf-to-text",
+    "pluralName": "pdf-to-texts",
+    "displayName": "PdfToText"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

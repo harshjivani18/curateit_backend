@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_query_params_iframes",
+  "info": {
+    "displayName": "Iframe",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "iframe_bool": {
+      "type": "boolean",
+      "default": false
+    },
+    "iframe": {
+      "type": "text"
+    },
+    "isPublished": {
+      "type": "boolean",
+      "default": false
+    },
+    "queryStr": {
+      "type": "string"
+    }
+  }
+}

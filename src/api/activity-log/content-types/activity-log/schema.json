@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activity_logs",
+  "info": {
+    "singularName": "activity-log",
+    "pluralName": "activity-logs",
+    "displayName": "ActivityLog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "action": {
+      "type": "enumeration",
+      "enum": [
+        "Created",
+        "Updated",
+        "Deleted",
+        "Imported",
+        "Shared",
+        "Moved",
+        "UpdateMany",
+        "DeleteAll"
+      ]
+    },
+    "actionType": {
+      "type": "enumeration",
+      "enum": [
+        "Ai Prompt",
+        "App",
+        "Article",
+        "Audio",
+        "Book",
+        "Code",
+        "Email Newsletter",
+        "Epub",
+        "Highlight",
+        "Image",
+        "Link",
+        "LinkedIn",
+        "Movie",
+        "Note",
+        "PDF",
+        "Podcast",
+        "Product",
+        "Profile",
+        "Quote",
+        "RSS",
+        "Screenshot",
+        "SocialFeed",
+        "Text",
+        "Twitter",
+        "Video",
+        "Gems",
+        "Collection",
+        "Follow",
+        "Unfollow",
+        "Image to text",
+        "Text to speech",
+        "Saved Tabs",
+        "App shorcut",
+        "Text Expander"
+      ]
+    },
+    "module": {
+      "type": "enumeration",
+      "enum": [
+        "Gem",
+        "Collection",
+        "Users",
+        "SidebarApps"
+      ]
+    },
+    "count": {
+      "type": "biginteger"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "activity_logs"
+    },
+    "collection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collection.collection",
+      "inversedBy": "activity_logs"
+    },
+    "gems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gem.gem",
+      "mappedBy": "activity_logs"
+    }
+  }
+}

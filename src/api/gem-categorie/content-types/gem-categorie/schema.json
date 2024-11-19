@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gem_categories",
+  "info": {
+    "singularName": "gem-categorie",
+    "pluralName": "gem-categories",
+    "displayName": "GemCategories",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gem": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categorie.categorie",
+      "inversedBy": "GemCategories"
+    },
+    "Gems": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gem.gem",
+      "mappedBy": "gem_category"
+    }
+  }
+}

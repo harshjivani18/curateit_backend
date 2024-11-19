@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movies_view_lists",
+  "info": {
+    "singularName": "movies-view-list",
+    "pluralName": "movies-view-lists",
+    "displayName": "MoviesViewList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    }
+  }
+}

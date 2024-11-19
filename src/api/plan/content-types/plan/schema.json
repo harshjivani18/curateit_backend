@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plans",
+  "info": {
+    "singularName": "plan",
+    "pluralName": "plans",
+    "displayName": "Plans",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "display_name": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Inactive"
+      ],
+      "default": "Active"
+    },
+    "plan_id": {
+      "type": "string",
+      "required": true
+    },
+    "price_id": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "tenure": {
+      "type": "enumeration",
+      "enum": [
+        "Monthly",
+        "Yearly"
+      ]
+    },
+    "is_team_plan": {
+      "type": "boolean"
+    },
+    "config_limit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::config-limit.config-limit",
+      "inversedBy": "related_plans"
+    },
+    "is_default_created_plan": {
+      "type": "boolean"
+    }
+  }
+}

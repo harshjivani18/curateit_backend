@@ -1,0 +1,119 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookmark_configs",
+  "info": {
+    "singularName": "bookmark-config",
+    "pluralName": "bookmark-configs",
+    "displayName": "BookmarkConfig",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "string",
+      "default": "bookmark"
+    },
+    "propertyOrder": {
+      "type": "json"
+    },
+    "propertyShown": {
+      "type": "json"
+    },
+    "propertyHidden": {
+      "type": "json"
+    },
+    "showComments": {
+      "type": "boolean",
+      "default": true
+    },
+    "showPropertyTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "showPropertyDescription": {
+      "type": "boolean",
+      "default": true
+    },
+    "showPropertyFolder": {
+      "type": "boolean",
+      "default": true
+    },
+    "showPropertyTags": {
+      "type": "boolean",
+      "default": true
+    },
+    "showPropertyIcons": {
+      "type": "boolean",
+      "default": true
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "bookmark_config"
+    },
+    "filter": {
+      "type": "json"
+    },
+    "sort": {
+      "type": "json"
+    },
+    "groupBy": {
+      "type": "string"
+    },
+    "subGroupBy": {
+      "type": "string"
+    },
+    "layout": {
+      "type": "string",
+      "default": "moodboard"
+    },
+    "configCollSetting": {
+      "type": "json"
+    },
+    "configFilterSetting": {
+      "type": "json"
+    },
+    "configTagSetting": {
+      "type": "json"
+    },
+    "cardSize": {
+      "type": "string"
+    },
+    "showTableVerticalLine": {
+      "type": "boolean"
+    },
+    "tableWrapColumns": {
+      "type": "boolean"
+    },
+    "groupLayout": {
+      "type": "string"
+    },
+    "subGroupLayout": {
+      "type": "string"
+    },
+    "columnColor": {
+      "type": "boolean"
+    },
+    "configLinksSetting": {
+      "type": "json"
+    },
+    "showTextEditor": {
+      "type": "boolean",
+      "default": false
+    },
+    "order_of_collections": {
+      "type": "json"
+    },
+    "order_of_tags": {
+      "type": "json"
+    },
+    "hideBrokenLinks": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

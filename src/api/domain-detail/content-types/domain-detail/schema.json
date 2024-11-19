@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "domain_details",
+  "info": {
+    "singularName": "domain-detail",
+    "pluralName": "domain-details",
+    "displayName": "Domain-detail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "type": "json"
+    }
+  }
+}
