@@ -14,7 +14,7 @@ module.exports = createCoreController('api::internal-ai-prompt.internal-ai-promp
     //     try {
 
     //         // // Replace 'YOUR_API_KEY' with your actual GPT-3 API key
-    //         // const apiKey = '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';
+    //         // const apiKey = '';
     //         // const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions'; // GPT-3 API endpoint
 
     //         // const prompt = 'Generate a template for a blog post about ';
