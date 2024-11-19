@@ -10,5 +10,4 @@ const axios = require('axios');
 
 module.exports = createCoreController('api::internal-ai-prompt.internal-ai-prompt', ({ strapi }) => ({
 
-   
 }));
